@@ -16,4 +16,4 @@ http.createServer(function(req, res) {
             
           res.end();
         });
-}).lister(1337, function() {console.log('bound to port 1337');});
+}).listen(1337, function() {console.log('bound to port 1337');});
