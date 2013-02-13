@@ -1,5 +1,6 @@
 // load http module
-var http = require('http')
+var http = require('http');
+var port = process.env.PORT || 1337;
 var fs = require('fs');
 
 // create http server
@@ -16,4 +17,4 @@ http.createServer(function(req, res) {
             
           res.end();
         });
-}).listen(1337, function() {console.log('bound to port 1337');});
+}).listen(port, function() {console.log('bound to port: ' + port);});
