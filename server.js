@@ -13,8 +13,10 @@ http.createServer(function(req, res) {
           if (err)
             res.write('Could not find or open file for reading\n');
           else
-            res.write('Yes, I opened the file!');
+            res.write(data);
             
+            
+          res.write('\n\noh yeah you are also bound to port ' + port)  
           res.end();
         });
 }).listen(port, function() {console.log('bound to port: ' + port);});
