@@ -12,7 +12,7 @@ http.createServer(function(req, res) {
           if (err)
             res.write('Could not find or open file for reading\n');
           else
-            res.write(data);
+            res.write('Yes, I opened the file!');
             
           res.end();
         });
