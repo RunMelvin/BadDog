@@ -17,4 +17,4 @@ http.createServer(function(req, res) {
             
           res.end();
         });
-}).listen(port, function() {console.log('bound to port: ' + port);});
+}).listen(port);
