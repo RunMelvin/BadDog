@@ -15,8 +15,6 @@ http.createServer(function(req, res) {
           else
             res.write(data);
             
-            
-          res.write('\n\noh yeah you are also bound to port ' + port)  
           res.end();
         });
 }).listen(port, function() {console.log('bound to port: ' + port);});
