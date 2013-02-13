@@ -1,7 +1,19 @@
+// load http module
 var http = require('http')
-var port = process.env.PORT || 1337;
+var fs = require('fs');
+
+// create http server
 http.createServer(function(req, res) {
-  res.writeHead(200, { 'Content-Type': 'text/plain' });
-  res.write("My name is Ralph and I am a bad dog. Sometimes I just can't help myself. I try to be good but I can't. My doggy instincts get the best of me and I can't control myself. I must steal food from kids. I must chew things I shouldn't. I must chase the cat, the squirrel, the rabbit, the bird. It's who I am.");
-  res.end()
-}).listen(port);
+  
+  //open and read in blah
+  fs.readFile('blah','utf8', function(err,data)
+        {
+          res.writeHead(200, {'Content-Type': 'text/plain'});
+          if (err)
+            res.write('Could not find or open file for reading\n');
+          else
+            res.write(data);
+            
+          res.end();
+        });
+}).lister(3135, function() {console.log('bound to port 3135');});
